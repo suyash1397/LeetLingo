@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Leetcode Paraphraser",
+    "name": "LeetLingo",
     "version": "1.0",
     "background": {
         "service_worker": "dist/background.bundle.js",
