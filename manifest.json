@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Leetcode Paraphraser",
+    "version": "1.0",
+    "background": {
+        "service_worker": "dist/background.bundle.js",
+        "type": "module"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://leetcode.com/problems/*/description/"
+            ],
+            "js": [
+                "dist/content_script.bundle.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
