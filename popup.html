@@ -70,13 +70,50 @@
             border-top: 1px solid #282828;
             margin: 20px 0;
         }
+
+        #clearHistoryBtn:hover {
+            background: #ffa116;
+            color: #232324;
+        }
+
+        #historyList::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        #historyList::-webkit-scrollbar-thumb {
+            background: #282828;
+            border-radius: 4px;
+        }
     </style>
 </head>
 
 <body>
     <h3>Paraphrase This Question</h3>
-    <button id="paraphraseBtn">Go</button>
+    <div style="display: flex; gap: 8px;">
+        <button id="paraphraseBtn" style="flex:1;">Go</button>
+        <button id="historyBtn" title="Show history"
+            style="width: 48px; background: #232324; color: #ffa116; border: 1px solid #ffa116;">&#x1F4D3;</button>
+    </div>
     <textarea id="result" placeholder="Paraphrased text appears here..."></textarea>
+    <!-- History Modal -->
+    <div id="historyModal"
+        style="display:none; position:absolute; top:0; left:0; width:100%; height:100%; background:#232324; z-index:1000;">
+        <div style="height:100%; width:100%; display:flex; flex-direction:column;">
+            <div style="display:flex; align-items:center; justify-content:space-between; padding:20px 20px 10px 20px;">
+                <span style="font-size:1.1em; font-weight:600;">History</span>
+                <div style="display:flex; gap:8px; align-items:center;">
+                    <button id="clearHistoryBtn"
+                        style="display:none; background:transparent; color:#ffa116; border:1px solid #ffa116; border-radius:6px; padding:4px 14px; cursor:pointer; font-size:0.98em; font-weight:500; transition:background 0.2s, color 0.2s;">
+                        Clear
+                    </button>
+                    <button id="closeHistory"
+                        style="background:none; border:none; color:#ffa116; font-size:1.3rem; cursor:pointer; margin-left:2px;">&times;</button>
+                </div>
+            </div>
+            <ul id="historyList" style="list-style:none; padding:0 20px 20px 20px; margin:0; flex:1; overflow-y:auto;">
+            </ul>
+        </div>
+    </div>
     <script src="popup.js"></script>
 </body>
 

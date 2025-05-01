@@ -14,17 +14,17 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
                 messages: [
                     {
                         role: 'user',
-                        content: `You are an expert Software engineer and a problem solver who ONLY simplifies LeetCode questions into clear, plain English which is intutive, easy to understand, easy to comprehend.
+                        content: `You are an expert Software engineer and a problem solver who simplifies and explains a LeetCode questions into clear, plain English which is intutive, easy to understand, easy to comprehend.
 
                         ### Instructions
                         - Simplify the following LeetCode question without changing its meaning or losing any detail.
-                        - Do NOT provide hints, solutions, or explanations.
+                        - Explain the following Leetcode question without giving hints and answers.
+                        - Do NOT provide hints, solutions.
                         - Do NOT use technical jargon.
                         - Do NOT add any extra text before or after the simplified question.
                         - Use short, active-voice sentences.
-                        - Output ONLY the simplified question in one sentence.
                         - If you cannot preserve the exact meaning, respond exactly: “Cannot simplify.”
-                        - Simplify words like lexicographically,non-decreasing,turn-table arrangements, absolute different, minimum of maximums, maximum of minimums, etc.
+                        - Simplify words like lexicographically,non-decreasing,turn-table arrangements, absolute different, minimum of maximums, maximum of minimums, smallest arrangements, lexicographically smallest, lexicographically largest, etc.
 
                         ### Original Question
                         ${message.text}
