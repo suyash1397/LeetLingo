@@ -7,48 +7,75 @@
     <title>Paraphrase Tool</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', 'Inter', 'Roboto', Arial, sans-serif;
             padding: 20px;
             width: 350px;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: #18181a;
+            color: #f7f7f8;
+            margin: 0;
         }
 
         h3 {
             margin-bottom: 20px;
-            color: #4a4a4a;
+            color: #f7f7f8;
+            font-weight: 600;
+            font-size: 1.2rem;
+            letter-spacing: 0.5px;
         }
 
         textarea {
             width: 100%;
             height: 150px;
-            margin-top: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            margin-top: 16px;
+            padding: 12px;
+            border: 1px solid #282828;
+            border-radius: 8px;
+            background-color: #232324;
+            color: #f7f7f8;
             resize: none;
             box-sizing: border-box;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        textarea:focus {
+            border-color: #ffa116;
+            outline: none;
         }
 
         button {
-            padding: 10px 15px;
-            background-color: #007bff;
-            color: white;
+            display: block;
+            margin-bottom: 10px;
+            padding: 10px 0;
+            width: 100%;
+            background-color: #ffa116;
+            color: #18181a;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: background 0.2s, color 0.2s;
         }
 
         button:hover {
-            background-color: #0056b3;
+            background-color: #ffb84d;
+            color: #18181a;
+        }
+
+        /* Optional: subtle divider line */
+        hr {
+            border: none;
+            border-top: 1px solid #282828;
+            margin: 20px 0;
         }
     </style>
 </head>
 
 <body>
-    <h3>Paraphrase Question</h3>
-    <button id="paraphraseBtn">Run</button>
+    <h3>Paraphrase This Question</h3>
+    <button id="paraphraseBtn">Go</button>
     <textarea id="result" placeholder="Paraphrased text appears here..."></textarea>
     <script src="popup.js"></script>
 </body>
