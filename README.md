@@ -1,4 +1,4 @@
-```markdown
+
 # Leetcode Paraphraser Chrome Extension
 
 A Chrome extension that scrapes Leetcode problem descriptions and sends them to the Groq API for paraphrasing. The paraphrased text is then displayed in the extension’s popup.
@@ -189,4 +189,3 @@ module.exports = {
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-```
